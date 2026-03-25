@@ -1,0 +1,22 @@
+<div id="hyundai-news">뉴스 로딩 중...</div>
+
+<script>
+  const RSS_URL = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnews.google.com%2Frss%2Fsearch%3Fq%3D%25ED%2598%2584%25EB%258C%2580%25EB%25A6%25AC%25EB%25B0%2594%25ED%258A%25B8%26hl%3Dko%26gl%3DKR%26ceid%3DKR%3Ako`;
+
+  fetch(RSS_URL)
+    .then(response => response.json())
+    .then(data => {
+      const items = data.items.slice(0, 5); // 최신 뉴스 5개만 선택
+      let html = '<ul style="list-style: none; padding: 0;">';
+      items.forEach(item => {
+        html += `<li style="margin-bottom: 10px;">
+                   <a href="${item.link}" target="_blank" style="text-decoration: none; color: #0066cc; font-weight: bold;">
+                     ${item.title}
+                   </a>
+                   <br><small style="color: #666;">${item.pubDate.split(' ')}</small>
+                 </li>`;
+      });
+      html += '</ul>';
+      document.getElementById('hyundai-news').innerHTML = html;
+    });
+</script>
