@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=https://www.mirae-biz.com/news/articleView.html?idxno=106875">
+    <title>페이지 이동 중...</title>
+    <script type="text/javascript">
+        // 자바스크립트를 이용한 보조 리다이렉트
+        window.location.href = "https://www.mirae-biz.com/news/articleView.html?idxno=106875"
+    </script>
+</head>
+<body>
+    <p>잠시 후 기사 페이지로 이동합니다. 이동하지 않으면 <a href="https://www.mirae-biz.com/news/articleView.html?idxno=106875">여기</a>를 클릭하세요.</p>
+</body>
+</html>
